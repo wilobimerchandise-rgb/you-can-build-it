@@ -1,0 +1,147 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Clash Display"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      colors: {
+        ink: {
+          50: '#f6f7f9',
+          100: '#eceef2',
+          200: '#d5d9e2',
+          300: '#b0b7c6',
+          400: '#848fa5',
+          500: '#646e88',
+          600: '#4f586f',
+          700: '#41485a',
+          800: '#383d4c',
+          900: '#1f2230',
+          950: '#131520',
+        },
+        brand: {
+          50: '#eefdf4',
+          100: '#d6fae8',
+          200: '#aff3d5',
+          300: '#7ce8ba',
+          400: '#3fd597',
+          500: '#18bd7b',
+          600: '#0a9a63',
+          700: '#087a52',
+          800: '#0a6044',
+          900: '#0a4f3a',
+          950: '#022e22',
+        },
+        ocean: {
+          50: '#eff6ff',
+          100: '#dae8fe',
+          200: '#bcd6fe',
+          300: '#8bbafd',
+          400: '#5498fb',
+          500: '#337af6',
+          600: '#1d5af0',
+          700: '#1646de',
+          800: '#1839b3',
+          900: '#1a338d',
+          950: '#15215b',
+        },
+        accent: {
+          50: '#fffbeb',
+          100: '#fff3c4',
+          200: '#ffe588',
+          300: '#ffd24a',
+          400: '#ffb81f',
+          500: '#f99307',
+          600: '#dd6d02',
+          700: '#b74d06',
+          800: '#943c0c',
+          900: '#7a330d',
+          950: '#461a02',
+        },
+        success: {
+          50: '#ecfdf5',
+          500: '#10b981',
+          600: '#059669',
+        },
+        warning: {
+          50: '#fffbeb',
+          500: '#f59e0b',
+          600: '#d97706',
+        },
+        error: {
+          50: '#fef2f2',
+          500: '#ef4444',
+          600: '#dc2626',
+        },
+      },
+      animation: {
+        'fade-in-up': 'fadeInUp 0.7s ease-out forwards',
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'slide-in-right': 'slideInRight 0.6s ease-out forwards',
+        'float': 'float 6s ease-in-out infinite',
+        'float-slow': 'float 9s ease-in-out infinite',
+        'pulse-ring': 'pulseRing 2.5s ease-out infinite',
+        'shimmer': 'shimmer 3s linear infinite',
+        'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 8s ease infinite',
+        'marquee': 'marquee 30s linear infinite',
+        'spin-slow': 'spin 20s linear infinite',
+        'wiggle': 'wiggle 0.8s ease-in-out infinite',
+        'pop-in': 'popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+      },
+      keyframes: {
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(40px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        pulseRing: {
+          '0%': { transform: 'scale(0.8)', opacity: '0.8' },
+          '100%': { transform: 'scale(2.2)', opacity: '0' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        bounceSubtle: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        gradientShift: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        popIn: {
+          '0%': { opacity: '0', transform: 'scale(0.8)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+      },
+      backgroundImage: {
+        'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0z' fill='none'/%3E%3Cpath d='M0 0h1v40H0zM0 0h40v1H0z' fill='%23000' fill-opacity='0.04'/%3E%3C/svg%3E\")",
+      },
+    },
+  },
+  plugins: [],
+};
