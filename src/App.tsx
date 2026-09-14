@@ -1,17 +1,41 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
-import Onboarding from './pages/Onboarding';
-import Dashboard from './pages/Dashboard';
-import VibeMode from './pages/VibeMode';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import HowItWorks from '@/components/HowItWorks';
+import AgeTracks from '@/components/AgeTracks';
+import UISpec from '@/components/UISpec';
+import UserFlows from '@/components/UserFlows';
+import Templates from '@/components/Templates';
+import WhyUs from '@/components/WhyUs';
+import ParentHQ from '@/components/ParentHQ';
+import Safety from '@/components/Safety';
+import Playbook from '@/components/Playbook';
+import Roadmap from '@/components/Roadmap';
+import Pricing from '@/components/Pricing';
+import CTA from '@/components/CTA';
+import Footer from '@/components/Footer';
 
-export default function App() {
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/onboarding" replace />} />
-      <Route path="/onboarding" element={<Onboarding />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/vibe" element={<VibeMode />} />
-      {/* /parent-hq, /editor/:projectId, /badges follow the same pattern
-          — intentionally not padded out per the Week 1-2 scope note. */}
-    </Routes>
+    <div className="relative min-h-screen overflow-x-hidden bg-ink-950">
+      <Navbar />
+      <main>
+        <Hero />
+        <HowItWorks />
+        <AgeTracks />
+        <UISpec />
+        <UserFlows />
+        <Templates />
+        <WhyUs />
+        <ParentHQ />
+        <Safety />
+        <Playbook />
+        <Roadmap />
+        <Pricing />
+        <CTA />
+      </main>
+      <Footer />
+    </div>
   );
 }
+
+export default App;
